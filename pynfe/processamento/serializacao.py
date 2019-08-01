@@ -754,7 +754,7 @@ class SerializacaoQrcode(object):
         # url_chave - Texto com a URL de consulta por chave de acesso a ser impressa no DANFE NFC-e.
         # Informar a URL da “Consulta por chave de acesso da NFC-e”.
         # A mesma URL que deve estar informada no DANFE NFC-e para consulta por chave de acesso
-        lista_uf_padrao = ['PR', 'CE', 'RS', 'RJ', 'RO', 'DF']
+        lista_uf_padrao = ['PR', 'RS', 'RJ', 'RO', 'DF']
         if uf.upper() in lista_uf_padrao:
             qrcode = NFCE[uf.upper()]['QR'] + url
             url_chave = NFCE[uf.upper()]['URL']
@@ -777,7 +777,7 @@ class SerializacaoQrcode(object):
             qrcode = NFCE[uf.upper()]['QR'] + url
             url_chave = NFCE[uf.upper()]['QR'][:-1]
 
-        # AC, AM, RR, PA,
+        # AC, AM, RR, PA, CE
         else:
             if tpamb == '1':
                 qrcode = NFCE[uf.upper()]['HTTPS'] + NFCE[uf.upper()]['QR'] + url

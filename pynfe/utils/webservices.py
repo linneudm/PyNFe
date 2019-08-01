@@ -93,14 +93,17 @@ NFCE = {
 	    	'HOMOLOGACAO': 'http://webas.'
 	    },
 	    'CE': {
-	    	'STATUS': '',
-	    	'AUTORIZACAO': '',
-	    	'RECIBO': '',
-	    	'CHAVE': '',
-	    	'INUTILIZACAO': '',
-	    	'EVENTOS': '',
-	    	'QR': 'http://nfceh.sefaz.ce.gov.br/pages/ShowNFCe.html?',
-	    	'URL': 'http://nfceh.sefaz.ce.gov.br/pages/consultaNota.jsf'
+	    	'STATUS': 'sefaz.ce.gov.br/nfce4/services/NFeStatusServico4?WSDL',
+	    	'AUTORIZACAO': 'sefaz.ce.gov.br/nfce4/services/NFeAutorizacao4?WSDL',
+			'RECIBO': 'sefaz.ce.gov.br/nfce4/services/NFeRetAutorizacao4?WSDL',
+			'CADASTRO': 'sefaz.ce.gov.br/nfce4/services/CadConsultaCadastro4?WSDL',
+	    	'CHAVE': 'sefaz.ce.gov.br/nfce4/services/NFeConsultaProtocolo4?WSDL',
+	    	'INUTILIZACAO': 'sefaz.ce.gov.br/nfce4/services/NFeInutilizacao4?WSDL',
+	    	'EVENTOS': 'sefaz.ce.gov.br/nfce4/services/NFeRecepcaoEvento4?WSDL',
+	    	'QR': 'sefaz.ce.gov.br/pages/ShowNFCe.html?',
+	    	'URL': 'sefaz.ce.gov.br/pages/ShowNFCe.html',
+			'HTTPS': 'https://nfce.',
+			'HOMOLOGACAO': 'https://nfceh.'
 	    },
 	    'RN': {
 	    	#'QR': 'http://www.nfe.rn.gov.br/portal/consultarNFCe.jsp?',
