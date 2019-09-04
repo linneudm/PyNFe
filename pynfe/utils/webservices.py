@@ -290,6 +290,17 @@ NFCE = {
 	    	'HTTPS': 'https://nfce.',
 	    	'HOMOLOGACAO': 'https://nfce-homologacao.'
 	    },
+		'SVAN': {
+	    	'STATUS': 'sefazvirtual.fazenda.gov.br/NFeStatusServico4/NFeStatusServico4.asmx',
+	    	'AUTORIZACAO': 'sefazvirtual.fazenda.gov.br/NFeAutorizacao4/NFeAutorizacao4.asmx',
+	    	'RECIBO': 'sefazvirtual.fazenda.gov.br/NFeRetAutorizacao4/NFeRetAutorizacao4.asmx',
+	    	'CHAVE': 'sefazvirtual.fazenda.gov.br/NFeConsultaProtocolo4/NFeConsultaProtocolo4.asmx',
+	    	'INUTILIZACAO': 'sefazvirtual.fazenda.gov.br/NFeInutilizacao4/NFeInutilizacao4.asmx',
+	    	'EVENTOS': 'sefazvirtual.fazenda.gov.br/NFeRecepcaoEvento4/NFeRecepcaoEvento4.asmx',
+	    	'DOWNLOAD': 'sefazvirtual.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx',
+	    	'HTTPS': 'https://www.',
+	    	'HOMOLOGACAO': 'https://hom.'
+	    },
 }
 
 # Nfe
