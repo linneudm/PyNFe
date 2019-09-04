@@ -74,3 +74,4 @@ target/
 db.*
 
 TODO*
+gerar_chave_nfe.py

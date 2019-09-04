@@ -340,6 +340,20 @@ class ComunicacaoSefaz(Comunicacao):
 
     def _get_url(self, modelo, consulta):
         """ Retorna a url para comunicação com o webservice """
+        #estado do maranhao eh diferentao
+        if self.uf.upper() == 'MA':
+            #ambiente
+            if self._ambiente == 1:
+                ambiente = 'HTTPS'
+            else:
+                ambiente = 'HOMOLOGACAO'
+            if modelo == 'nfe':
+                # nfe Ex: https://nfe.fazenda.pr.gov.br/nfe/NFeStatusServico3
+                self.url = NFE['SVAN'][ambiente] + NFE['SVAN'][consulta]
+            elif modelo == 'nfce':
+                # nfce Ex: https://homologacao.nfce.fazenda.pr.gov.br/nfce/NFeStatusServico3
+                self.url = NFCE['SVRS'][ambiente] + NFCE['SVRS'][consulta]
+
         # estado que implementam webservices proprios
         lista = ['PR', 'MS', 'SP', 'AM', 'CE', 'BA', 'GO', 'MG', 'MT', 'PE', 'RS']
         if self.uf.upper() in lista:
@@ -362,7 +376,7 @@ class ComunicacaoSefaz(Comunicacao):
         # Estados que utilizam outros ambientes
         else:
             lista_svrs = ['AC', 'RJ', 'RN', 'PB', 'SC', 'SE', 'PI', 'DF', 'ES']
-            lista_svan = ['PA','MA']
+            lista_svan = ['PA']
             if self.uf.upper() in lista_svrs:
                 if self._ambiente == 1:
                     ambiente = 'HTTPS'
