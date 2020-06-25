@@ -446,9 +446,12 @@ class ComunicacaoSefaz(Comunicacao):
             )
             xml = xml_declaration + xml
             # Faz o request com o servidor
-            result = requests.post(url, xml, headers=self._post_header(), cert=chave_cert, verify=False)
+            result = requests.post(url, xml, headers=self._post_header(), cert=chave_cert, verify=False, timeout=50)
             result.encoding = 'utf-8'
             return result
+        except requests.exceptions.Timeout as ex:
+            print("Tempo limite de conexão excedido pelo requests.")
+            raise ex
         except requests.exceptions.RequestException as e:
             raise e
         finally:
